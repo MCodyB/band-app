@@ -1,4 +1,4 @@
 <div>
 	<h4>Album</h4>
-	<p><%= album.name %></p>
+	<p><%= link_to album.name, band_album_url(@band.id, album.id) %></p>
 	<!-- tracks -->

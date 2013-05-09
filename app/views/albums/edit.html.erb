@@ -1,0 +1,12 @@
+<h1>Edit Album</h1>
+
+<%= form_for [@band, @album] do |f| %>
+  <p>
+		<%= f.label :name, "album name" %><br />
+		<%= f.text_field :name%>
+	</p>
+
+	<p>
+		<%= f.submit 'Submit'%>
+	</p>
+<%end%>

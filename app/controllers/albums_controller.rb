@@ -1,4 +1,9 @@
 class AlbumsController < ApplicationController
+
+	def show
+		@album = Album.find(params[:id])
+	end
+
 	def new
 		@album = Album.new
 	end
@@ -11,6 +16,18 @@ class AlbumsController < ApplicationController
 		else
 			render "new"
 		end
+	end
+
+	def edit
+		@album = Album.find(params[:id])
+		@band = @album.band
+	end
+
+	def update
+		@album = Album.find(params[:id])
+		@album.update_attributes(params[:album])
+
+		redirect_to band_path(@album.band)
 	end
 
 

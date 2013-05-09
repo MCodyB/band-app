@@ -1,0 +1,16 @@
+<%= form_for(@track, html: {multipart: true}) do |f| %>
+	<%= f.label(:name, "Track name:") %>
+	<%= f.text_field(:name) %>
+	<br>
+	<%= f.label(:duration, "Track duration:") %>
+	<%= f.time_select(:duration) %>
+	<br>
+	<%= f.radio_button :bonus, "true" %>
+	<%= f.radio_button :bonus, "false" %>
+	<br>
+	<%= f.label(:lyrics, "Track lyrics:") %>
+	<%= f.text_area(:lyrics) %>
+
+
+	<%= f.submit%>
+<% end %>

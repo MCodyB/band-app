@@ -1,0 +1,12 @@
+
+<h1><%=@album.name%></h1>=
+
+<%@album.tracks.each do |track|%>
+<ul>
+	<li><%= track.name%></li>
+</ul>
+<%end%>
+
+<%= link_to "Add Track", new_track_url(:album_id => @album.id) %>
+
+<%= link_to "Edit Album Name", edit_band_album_url %>

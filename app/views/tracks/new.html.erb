@@ -1,0 +1,19 @@
+<h1>New Track</h1>
+<%=form_for(@track) do |f| %>
+	<%= f.label(:name, "Track name:") %>
+	<%= f.text_field(:name) %>
+	<br>
+	<%= f.label(:duration, "Track duration:") %>
+	<%= f.time_select(:duration) %>
+	<br>
+	<%= f.label(:bonus, "Bonus Track True:") %>
+	<%= f.radio_button :bonus, "1" %>
+	<%= f.label(:bonus, "Bonus Track False:") %>
+	<%= f.radio_button :bonus, "0" %>
+	<br>
+	<%= f.label(:lyrics, "Track lyrics:") %>
+	<%= f.text_area(:lyrics) %>
+
+
+	<%= f.submit%>
+<% end %>
