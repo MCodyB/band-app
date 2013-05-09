@@ -1,0 +1,18 @@
+<h1>New Artist</h1>
+
+<%=form_for(@artist) do |f| %>
+	<br>
+	<%= f.label(:name, "Artist Name:") %>
+	<%= f.text_field(:name) %>
+
+	<ul>
+	  <% Band.all.each do |band| %>
+	      <li>
+	        <%= check_box_tag 'member_ids[]', band.id %>
+	        <%= band.name %>
+	      </li>
+	  <% end %>
+		<%= hidden_field_tag('member_ids[]', "") %>
+	</ul>
+	<%= f.submit%>
+<% end %>

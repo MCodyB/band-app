@@ -2,7 +2,15 @@
 	<%= f.label(:name, "Band name:") %>
 	<%= f.text_field(:name) %>
 	<br>
-
+	<ul>
+	  <% Artist.all.each do |artist| %>
+	      <li>
+	        <%= check_box_tag 'member_ids[]', artist.id %>
+	        <%= role.name %>
+	      </li>
+	  <% end %>
+		<%= hidden_field_tag('member_ids[]', "") %>
+	</ul>
 	<%= f.submit%>
 <% end %>
 
