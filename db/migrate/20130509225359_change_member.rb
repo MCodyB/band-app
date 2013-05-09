@@ -1,4 +1,4 @@
-class AddMember < ActiveRecord::Migration
+class ChangeMember < ActiveRecord::Migration
   def change
 		create_table :members do |t|
 			t.timestamp
