@@ -18,6 +18,8 @@ class BandsController < ApplicationController
 
 	def show
 		@band = Band.find(params[:id])
+		@album = Album.new
+		@album.band_id = @band.id
 	end
 
 	def destroy
