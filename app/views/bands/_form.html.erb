@@ -1,0 +1,9 @@
+<%= form_for(@band, html: {multipart: true}) do |f| %>
+	<%= f.label(:name, "Band name:") %>
+	<%= f.text_field(:name) %>
+	<br>
+
+	<% f.submit("add dat band")%>
+<% end %>
+
+	<!-- album names, track in albums -->
