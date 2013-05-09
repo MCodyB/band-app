@@ -4,6 +4,8 @@ MusicApp::Application.routes.draw do
 	end
 
 	resources :tracks
+	resources :songs
+	resources :artists
 
 	root to: "bands#index"
 end

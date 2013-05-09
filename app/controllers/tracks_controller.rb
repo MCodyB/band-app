@@ -7,7 +7,7 @@ class TracksController < ApplicationController
 	def create
 		@track = Track.new(params[:track])
 		if @track.save
-			redirect_to album_path(@track.album)
+			redirect_to band_album_url(@track.band.id, @track.album.id)
 		else
 			render "new"
 		end

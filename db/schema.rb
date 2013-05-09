@@ -11,14 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509195004) do
+ActiveRecord::Schema.define(:version => 20130509223533) do
 
   create_table "albums", :force => true do |t|
     t.string  "name"
     t.integer "band_id"
   end
 
+  create_table "artists", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+    t.integer  "member_id"
+  end
+
   create_table "bands", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+  end
+
+  create_table "songs", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "name"
@@ -29,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20130509195004) do
     t.boolean "bonus"
     t.text    "lyrics"
     t.integer "album_id"
+    t.integer "song_id"
   end
 
 end

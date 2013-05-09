@@ -1,0 +1,7 @@
+<h1>Here's your stupid songs</h1>
+
+<% @songs.each do |song| %>
+<ul>
+	<li><%= link_to song.name, song_url(song.id)%>
+</ul>
+<% end %>

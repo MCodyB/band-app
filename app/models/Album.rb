@@ -4,5 +4,6 @@ class Album < ActiveRecord::Base
 	validates :name, :presence => true
 
 	has_many :tracks
+	has_many :songs, :through => :tracks
 	belongs_to :band
 end

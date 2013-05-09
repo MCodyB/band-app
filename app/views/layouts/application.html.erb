@@ -10,9 +10,12 @@
 	<p class="flash">
 	  <%= flash.notice %>
 	</p>
-	<%= link_to "<< Hmpg", root_url %> <br>
+	<%= link_to "<< Hmpg", root_url %>
+	<%= link_to "Sngs >>", songs_url %><br>
 
 <%= yield %>
+
+<%= link_to "Add a Song", new_song_url %>
 
 </body>
 </html>
